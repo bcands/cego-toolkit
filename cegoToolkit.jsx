@@ -5,6 +5,7 @@
 #include '../CEGO Functions/extractMask.jsx';
 #include '../CEGO Functions/markSources.jsx';
 #include '../CEGO Functions/dateFolder.jsx';
+#include '../CEGO Functions/addControl.jsx';
 
 {
     function myScript(thisObj) {

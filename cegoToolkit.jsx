@@ -31,6 +31,7 @@
                     orientation:'column',\
                     alignChildren:'top',\
                     btnDateFolder:Button{size:[110,30],text:'Today Folder'},\
+                    btnControl:Button{size:[110,30],text:'Control'}\
                 }}}";
 
             panelGrp = panel.add(res);
@@ -43,6 +44,7 @@
             panelGrp.gBtns.btnExtractMask.onClick = extractMask;
             panelGrp.gBtns.btnMarkSources.onClick = markSources;
             panelGrp.gBtns2.btnDateFolder.onClick = dateFolder;
+            panelGrp.gBtns2.btnControl.onClick = addControl;
             panelGrp.gBtns.gOffset.offLeft.onClick = offset;
             panelGrp.gBtns.gOffset.offRight.onClick = offset;
 

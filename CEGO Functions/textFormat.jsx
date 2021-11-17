@@ -4,7 +4,7 @@ function textFormat() {
     var sel = prj.selection;
     var tempName;
 
-    if (sel.length > 1) {
+    if (sel.length > 0) {
         for (var i = 0; i < sel.length; i++) {
             tempName = sel[i].name;
             sel[i].name = tempName.replace(/\s/g, "-").toUpperCase();

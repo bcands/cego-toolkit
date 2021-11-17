@@ -6,6 +6,7 @@
 #include '../CEGO Functions/markSources.jsx';
 #include '../CEGO Functions/dateFolder.jsx';
 #include '../CEGO Functions/addControl.jsx';
+#include '../CEGO Functions/textFormat.jsx';
 
 {
     function myScript(thisObj) {
@@ -21,8 +22,7 @@
                     alignChildren:'top',\
                     spacing:6,\
                     btnPSD:Button{size:[110,30],text:'PSD Text'},\
-                    btnConsolidate:Button{size:[110,30],text:'Consolidate'},\
-                    btnCleanFX:Button{size:[110,30],text:'Clean FX'},\
+                    btnControl:Button{size:[110,30],text:'Control'}\
                     btnExtractMask:Button{size:[110,30],text:'Mask to Shape'},\
                     btnMarkSources:Button{size:[110,30],text:'Mark Sources'},\
                     gOffset:Group{orientation:'row',spacing:2,alignChildren:'center',\
@@ -31,8 +31,11 @@
                     size:[20,100],\
                     orientation:'column',\
                     alignChildren:'top',\
+                    spacing:6,\
                     btnDateFolder:Button{size:[110,30],text:'Today Folder'},\
-                    btnControl:Button{size:[110,30],text:'Control'}\
+                    btnFormat:Button{size:[110,30],text:'Text Format'},\
+                    btnConsolidate:Button{size:[110,30],text:'Consolidate'},\
+                    btnCleanFX:Button{size:[110,30],text:'Clean FX'},\
                 }}}";
 
             panelGrp = panel.add(res);
@@ -40,14 +43,16 @@
             panel.layout.layout(true);
 
             panelGrp.gBtns.btnPSD.onClick = psdText;
-            panelGrp.gBtns.btnConsolidate.onClick = consolidate;
-            panelGrp.gBtns.btnCleanFX.onClick = cleanFx;
+            panelGrp.gBtns.btnControl.onClick = addControl;
             panelGrp.gBtns.btnExtractMask.onClick = extractMask;
             panelGrp.gBtns.btnMarkSources.onClick = markSources;
-            panelGrp.gBtns2.btnDateFolder.onClick = dateFolder;
-            panelGrp.gBtns2.btnControl.onClick = addControl;
             panelGrp.gBtns.gOffset.offLeft.onClick = offset;
             panelGrp.gBtns.gOffset.offRight.onClick = offset;
+
+            panelGrp.gBtns2.btnDateFolder.onClick = dateFolder;
+            panelGrp.gBtns2.btnFormat.onClick = textFormat;
+            panelGrp.gBtns2.btnConsolidate.onClick = consolidate;
+            panelGrp.gBtns2.btnCleanFX.onClick = cleanFx;
 
             return panel;
         }
